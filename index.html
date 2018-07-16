@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery-1.8.1.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <style>
+        canvas{
+            display: block;
+            margin: 10px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600px" height="580px"></canvas>
+       <!-- <script>
+            //绘制圆
+            function disc(x,y,r){
+                ctx.beginPath();
+                ctx.arc(x,y,r,0,ang(360));
+                ctx.fillStyle=color;
+                ctx.fill();
+                ctx.closePath();
+            }
+            disc(300,150,50);
+
+            var rotate=3;
+            var line=120;
+            function doRball(deg){
+                ctx.save();
+                ctx.beginPath();
+                ctx.globalCompositeOperation="destination-over";
+                ctx.translate(300,150);
+                ctx.rotate(deg);
+                ctx.moveTo(0,0);
+                ctx.lineTo(0,line);
+                ctx.strokeStyle="color";
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.globalCompositeOperation="source-over";
+                disc(0,line,10);
+                ctx.restore();
+            }
+            doRball();
+            for(var i=0;i<3;i++){
+                doRball(0);
+                doRball(180);
+                doRball(360);
+            }
+            //小球
+            var smallBY=300;
+            function smallBall(){
+                ctx.beginPath();
+                ctx.fillStyle="color";
+                ctx.arc(300,smallBY,10,0,Math.PI*2);
+                ctx.fill();
+            }
+
+            for(var i=0;i<10;i++){
+                smallBY+=25;
+                smallBall();
+            }
+
+            //设置每个旋转球初始角度
+            for(var i=0;i<rotateBallLen;i++){
+                rotateBallAng[i]=360/rotateBallLen/i;
+            }
+
+            //初始化
+            function into(deg){
+                disc(x0,y0,50);
+                doAllRBall(10);
+            }
+            into(0);
+
+            // 旋转球
+            setInterval(function(){
+//                ctx.clearRect(0,0,)
+                doAllRBall(10)
+            },1000);
+            //绘制所有旋转小球
+            function doAllRBall(deg){
+                for(var i=0;i<rotateBallAng.length;i++){
+                    rotateBallAng[i]=rotateBallAng[i]+deg;
+                    doRball(x0,y0,ang(rotateBallAng[i]),line)
+                }
+            }
+            //转换角度为弧度
+            function ang(deg){
+                return deg*Math.PI/180;
+            }
+        </script>-->
+    </canvas>
+</body>
+</html>
